@@ -3,9 +3,11 @@ import cv2
 import numpy
 
 cap = cv2.VideoCapture('circle.avi')
-# fgbg = cv2.createBackgroundSubtractorMOG2()
-# fgbg = cv2.createBackgroundSubtractorGSOC()
-fgbg = cv2.bgsegm.createBackgroundSubtractorGMG()
+# cap = cv2.VideoCapture('color_noise.avi')
+fgbg = cv2.createBackgroundSubtractorMOG2()
+# fgbg = cv2.bgsegm.createBackgroundSubtractorMOG()
+# fgbg = cv2.bgsegm.createBackgroundSubtractorGSOC()
+# fgbg = cv2.bgsegm.createBackgroundSubtractorGMG()
 
 while(1):
     ret, frame = cap.read()
