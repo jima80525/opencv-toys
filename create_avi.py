@@ -35,13 +35,13 @@ def circle():
             y = int(frame / 2)
         else:
             y = int(150 - (frame - 300) / 2)
-        cv2.circle(img,(frame + 40, y + 50),30,(255,255,0),-3)
+        cv2.circle(img,(frame + 40, y + 50),30,(255,0,0),-3)
         writer.write(img)
 
     writer.release()
 
 
-grey()
+# grey()
 color_noise()
-rect()
+# rect()
 circle()
