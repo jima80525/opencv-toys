@@ -25,7 +25,11 @@ def rect():
 
 def circle():
     writer = cv2.VideoWriter("circle.avi", cv2.VideoWriter_fourcc(*"MJPG"), 30,(640,480))
-    for frame in range(300):
+    for frame in range(20):
+        img = np.zeros((480,640,3), np.uint8)
+        writer.write(img)
+
+    for frame in range(600):
         img = np.zeros((480,640,3), np.uint8)
         if frame < 300:
             y = int(frame / 2)
